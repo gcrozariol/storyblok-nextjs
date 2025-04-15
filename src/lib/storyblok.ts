@@ -1,17 +1,27 @@
-import DefaultPage from '@/components/default-page'
+import ButtonBlock from '@/blocks/button'
+import CategoriesBlock from '@/blocks/categories'
+import CategoryCardBlock from '@/blocks/category-card'
+import FeaturedProductCardBlock from '@/blocks/featured-product-card'
+import FeaturedProductsBlock from '@/blocks/featured-products'
+import HeroBlock from '@/blocks/hero'
+import LessonsBlock from '@/blocks/lessons'
 import FallbackComponent from '@/components/fallback-component'
-import HeroSection from '@/components/hero-section'
-import TextSection from '@/components/text-section'
+import LandingPage from '@/components/landing-page'
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
 
 export const getStoryblokApi = storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   use: [apiPlugin],
-  components: {
-    'default-page': DefaultPage,
-    'text-section': TextSection,
-    'hero-section': HeroSection,
-  },
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   enableFallbackComponent: true,
   customFallbackComponent: FallbackComponent,
+  components: {
+    'landing-page': LandingPage,
+    button: ButtonBlock,
+    categories: CategoriesBlock,
+    'category-card': CategoryCardBlock,
+    'featured-product-card': FeaturedProductCardBlock,
+    'featured-products': FeaturedProductsBlock,
+    hero: HeroBlock,
+    lessons: LessonsBlock,
+  },
 })

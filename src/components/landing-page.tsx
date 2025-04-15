@@ -3,9 +3,9 @@ import {
   storyblokEditable,
   StoryblokServerComponent,
 } from '@storyblok/react/rsc'
-import { DefaultPageStoryblok } from './components-schema'
+import { LandingPageStoryblok } from './components-schema'
 
-export default function DefaultPage({ blok }: DefaultPageStoryblok) {
+export default function LandingPage({ blok }: LandingPageStoryblok) {
   return (
     <main {...storyblokEditable(blok)}>
       {blok.body.map((nestedBlok: SbBlokData) => (

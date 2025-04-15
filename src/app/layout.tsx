@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import ThemeProvider from '@/components/theme-provider'
 import StoryblokProvider from '@/components/storyblok-provider'
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 
 import './globals.css'
 
@@ -30,13 +29,18 @@ export default function RootLayout({
 }>) {
   return (
     <StoryblokProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Navigation />
-          {children}
-          <Footer />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </StoryblokProvider>

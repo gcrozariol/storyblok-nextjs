@@ -1,141 +1,78 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
+import { Music, ShoppingCart } from 'lucide-react'
+import { Button } from './ui/button'
 
-const Navigation = () => {
-  const [openMenu, setOpenMenu] = useState(false)
-
+export default function Navigation() {
   return (
-    <div className="relative bg-white border-b-2 border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center  py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/home">
-              <span className="sr-only">Logo</span>
-              <h1 className="text-black font-bold">Some company logo</h1>
-            </Link>
-          </div>
-          <div className="-mr-2 -my-2 md:hidden">
-            <button
-              type="button"
-              onClick={() => setOpenMenu(true)}
-              className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              aria-expanded="false"
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="flex items-center justify-between p-4">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-xl font-bold w-48"
+        >
+          <Music className="h-6 w-6" />
+          <span>Harmony Haven</span>
+        </Link>
+        <nav className="hidden md:flex gap-6">
+          <Link
+            href="/instruments"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            Instruments
+          </Link>
+          <Link
+            href="/equipment"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            Equipment
+          </Link>
+          <Link
+            href="/lessons"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            Lessons
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
+            Contact
+          </Link>
+        </nav>
+        <div className="flex items-center pr-2">
+          <Link href="/cart" className="flex justify-end relative w-48">
+            <ShoppingCart className="h-5 w-5" />
+            <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">
+              0
+            </span>
+          </Link>
+          <Button variant="outline" size="icon" className="md:hidden">
+            <span className="sr-only">Toggle menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5"
             >
-              <span className="sr-only">Open menu</span>
-              {/* <!-- Heroicon name: outline/menu --> */}
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-10">
-            <Link
-              href="/about"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              About
-            </Link>
-            <Link
-              href="/blog"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/services"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Services
-            </Link>
-          </div>
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </Button>
         </div>
       </div>
-
-      {/* <!--
-        Mobile menu, show/hide based on mobile menu state.
-      --> */}
-      {openMenu && (
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
-              <div className="flex items-center justify-between">
-                <div className="font-bold text-black pl-3">Company logo</div>
-                <div className="-mr-2">
-                  <button
-                    type="button"
-                    onClick={() => setOpenMenu(false)}
-                    className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                  >
-                    <span className="sr-only">Close menu</span>
-                    {/* <!-- Heroicon name: outline/x --> */}
-                    <svg
-                      className="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  <Link
-                    href="/about"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    {/* <!-- Heroicon name: outline/chart-bar --> */}
-                    <span className="ml-3 text-base font-medium text-gray-900">
-                      About
-                    </span>
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    {/* <!-- Heroicon name: outline/cursor-click --> */}
-                    <span className="ml-3 text-base font-medium text-gray-900">
-                      Blog
-                    </span>
-                  </Link>
-                  <Link
-                    href="/services"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                  >
-                    <span className="ml-3 text-base font-medium text-gray-900">
-                      Services
-                    </span>
-                  </Link>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+    </header>
   )
 }
-
-export default Navigation

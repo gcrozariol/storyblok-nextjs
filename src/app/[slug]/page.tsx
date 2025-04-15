@@ -1,3 +1,5 @@
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 import { getStoryblokApi } from '@/lib/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
 
@@ -15,5 +17,11 @@ export default async function StoryPage({
 
   const { data } = await fetchData(slug)
 
-  return <StoryblokStory story={data.story} />
+  return (
+    <>
+      <Navigation />
+      <StoryblokStory story={data.story} />
+      <Footer />
+    </>
+  )
 }
