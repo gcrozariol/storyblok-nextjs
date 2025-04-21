@@ -14,10 +14,13 @@ export default async function StoryPage({
 }) {
   const slug = (await params).slug
 
-  const { data } = await fetchData(slug)
-  const products = await getShopifyProducts()
+  const [storyblok, shopify] = await Promise.all([
+    await fetchData(slug),
+    await getShopifyProducts(),
+  ])
 
-  data.story.products = products
+  // FIX: Shopify should be implemented as a Storyblok add-on
+  storyblok.data.story.products = shopify.products
 
-  return <StoryblokStory story={data.story} />
+  return <StoryblokStory story={storyblok.data.story} />
 }

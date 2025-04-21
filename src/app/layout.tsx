@@ -3,13 +3,13 @@ import { Geist, Geist_Mono as GeistMono } from 'next/font/google'
 
 import ThemeProvider from '@/components/theme-provider'
 import StoryblokProvider from '@/components/storyblok-provider'
-
-import './globals.css'
 import { CartProvider } from '@/context/cart-context'
 import Footer from '@/components/footer'
 import Navigation from '@/components/navigation'
 import { SkipLink } from '@/components/skip-link'
 import { CartSidebar } from '@/components/cart-sidebar'
+
+import './globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -98,7 +98,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: '/site.webmanifest',
   alternates: {
     canonical: 'https://harmony-haven.gcrozariol.me',
     languages: {
