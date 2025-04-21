@@ -129,7 +129,7 @@ export default function Navigation() {
       {/* Mobile Sidebar */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 md:hidden"
+          className="fixed inset-0 z-50 md:hidden"
           aria-hidden="true"
           role="dialog"
           aria-modal="true"
@@ -152,7 +152,7 @@ export default function Navigation() {
               </Button>
             </div>
 
-            <nav className="flex flex-col space-y-6 bg-background pl-8">
+            <nav className="flex flex-col space-y-6 bg-background p-8">
               <Link
                 href="/instruments"
                 className="text-base font-medium transition-colors hover:text-primary"
