@@ -7,7 +7,7 @@ interface GridStoryblokProps {
 
 export default function GridBlok({ blok }: GridStoryblokProps) {
   return (
-    <div className={`py-8 gap-4 grid md:grid-cols-${blok.columns_number}`}>
+    <div className={`py-8 gap-4 grid lg:grid-cols-${blok.columns_number}`}>
       {blok.columns &&
         blok.columns.map(
           ({ _uid, image, product_name: productName, price, link, body }) => (
