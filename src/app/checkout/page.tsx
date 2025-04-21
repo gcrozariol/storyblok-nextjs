@@ -55,7 +55,7 @@ export default function CheckoutPage() {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-400">Subtotal</span>
-                  <span>${subtotal.toLocaleString()}</span>
+                  <span>${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Shipping</span>
@@ -63,11 +63,11 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Tax</span>
-                  <span>${(subtotal * 0.13).toLocaleString()}</span>
+                  <span>${(subtotal * 0.13).toFixed(2)}</span>
                 </div>
                 <div className="border-t border-gray-800 pt-4 flex justify-between font-bold">
                   <span>Total</span>
-                  <span>${(subtotal * 1.13).toLocaleString()}</span>
+                  <span>${(subtotal * 1.13).toFixed(2)}</span>
                 </div>
               </div>
 

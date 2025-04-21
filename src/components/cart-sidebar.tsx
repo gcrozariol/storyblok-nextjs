@@ -195,6 +195,7 @@ export function CartSidebar() {
               </p>
               <Button
                 asChild
+                onClick={closeCart}
                 className="w-full bg-white text-black hover:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-white focus:outline-none"
               >
                 <Link href="/checkout">
