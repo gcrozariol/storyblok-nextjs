@@ -1,7 +1,7 @@
 import { FeaturedProductsStoryblok } from '@/components/components-schema'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import FeaturedProductCardBlock from './featured-product-card'
+import FeaturedProductCardBlock from './product-card'
 
 interface FeaturedProductsStoryblokProps {
   blok: FeaturedProductsStoryblok

@@ -47,7 +47,10 @@ export interface CategoriesStoryblok {
     | LandingPageStoryblok
     | LessonsStoryblok
     | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
     | TeaserStoryblok
+    | TitleStoryblok
   )[];
   _uid: string;
   component: "categories";
@@ -90,6 +93,7 @@ export interface FeatureStoryblok {
 }
 
 export interface FeaturedProductCardStoryblok {
+  image?: AssetStoryblok;
   product_name?: string;
   price?: string;
   link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
@@ -113,7 +117,10 @@ export interface FeaturedProductsStoryblok {
     | LandingPageStoryblok
     | LessonsStoryblok
     | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
     | TeaserStoryblok
+    | TitleStoryblok
   )[];
   _uid: string;
   component: "featured-products";
@@ -133,8 +140,12 @@ export interface GridStoryblok {
     | LandingPageStoryblok
     | LessonsStoryblok
     | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
     | TeaserStoryblok
+    | TitleStoryblok
   )[];
+  columns_number?: string;
   _uid: string;
   component: "grid";
   [k: string]: any;
@@ -164,7 +175,10 @@ export interface LandingPageStoryblok {
     | LandingPageStoryblok
     | LessonsStoryblok
     | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
     | TeaserStoryblok
+    | TitleStoryblok
   )[];
   _uid: string;
   component: "landing-page";
@@ -195,7 +209,10 @@ export interface PageStoryblok {
     | LandingPageStoryblok
     | LessonsStoryblok
     | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
     | TeaserStoryblok
+    | TitleStoryblok
   )[];
   _uid: string;
   component: "page";
@@ -203,9 +220,59 @@ export interface PageStoryblok {
   [k: string]: any;
 }
 
+export type MultiassetStoryblok = {
+  alt?: string;
+  copyright?: string;
+  id: number;
+  filename: string;
+  name: string;
+  title?: string;
+  [k: string]: any;
+}[];
+
+export interface ProductDetailStoryblok {
+  name?: string;
+  description?: string;
+  specs?: string;
+  photos?: MultiassetStoryblok;
+  _uid: string;
+  component: "product-detail";
+  [k: string]: any;
+}
+
+export interface ProductsStoryblok {
+  body?: (
+    | ButtonStoryblok
+    | CategoriesStoryblok
+    | CategoryCardStoryblok
+    | FeatureStoryblok
+    | FeaturedProductCardStoryblok
+    | FeaturedProductsStoryblok
+    | GridStoryblok
+    | HeroStoryblok
+    | LandingPageStoryblok
+    | LessonsStoryblok
+    | PageStoryblok
+    | ProductDetailStoryblok
+    | ProductsStoryblok
+    | TeaserStoryblok
+    | TitleStoryblok
+  )[];
+  _uid: string;
+  component: "products";
+  [k: string]: any;
+}
+
 export interface TeaserStoryblok {
   headline?: string;
   _uid: string;
   component: "teaser";
+  [k: string]: any;
+}
+
+export interface TitleStoryblok {
+  value?: string;
+  _uid: string;
+  component: "title";
   [k: string]: any;
 }

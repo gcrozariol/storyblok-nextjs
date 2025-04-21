@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { Music, ShoppingCart } from 'lucide-react'
+import { Music } from 'lucide-react'
 import { Button } from './ui/button'
+import CartButton from './cart-button'
 
 export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between p-6 max-w-[1550px] mx-auto">
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-bold w-48"
@@ -21,10 +22,10 @@ export default function Navigation() {
             Instruments
           </Link>
           <Link
-            href="/equipment"
+            href="/equipments"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Equipment
+            Equipments
           </Link>
           <Link
             href="/lessons"
@@ -46,12 +47,7 @@ export default function Navigation() {
           </Link>
         </nav>
         <div className="flex items-center pr-2">
-          <Link href="/cart" className="flex justify-end relative w-48">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">
-              0
-            </span>
-          </Link>
+          <CartButton />
           <Button variant="outline" size="icon" className="md:hidden">
             <span className="sr-only">Toggle menu</span>
             <svg

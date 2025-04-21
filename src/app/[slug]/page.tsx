@@ -1,7 +1,6 @@
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import { getStoryblokApi } from '@/lib/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
+import { getShopifyProducts } from '@/lib/shopify'
 
 async function fetchData(slug: string) {
   const storyblokApi = getStoryblokApi()
@@ -16,12 +15,9 @@ export default async function StoryPage({
   const slug = (await params).slug
 
   const { data } = await fetchData(slug)
+  const products = await getShopifyProducts()
 
-  return (
-    <>
-      <Navigation />
-      <StoryblokStory story={data.story} />
-      <Footer />
-    </>
-  )
+  data.story.products = products
+
+  return <StoryblokStory story={data.story} />
 }

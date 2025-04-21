@@ -3,9 +3,9 @@ import { Music } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t bg-background">
-      <div className="container flex flex-col gap-8 px-4 py-10 md:px-6 lg:flex-row lg:gap-12">
-        <div className="flex flex-col gap-4 lg:w-1/3">
+    <footer className="border-t bg-background">
+      <div className="flex max-w-[1550px] mx-auto flex-col gap-8 px-4 py-10 md:px-6 lg:flex-row lg:gap-12">
+        <div className="flex flex-col justify-between gap-4 lg:w-1/3">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold">
             <Music className="h-6 w-6" />
             <span>Harmony Haven</span>
@@ -226,6 +226,14 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/accessibility"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Accessibility
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground"
                 >
@@ -261,7 +269,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t">
-        <div className="flex p-10 justify-between text-center text-sm text-muted-foreground">
+        <div className="flex p-10 justify-between text-center text-sm text-muted-foreground max-w-[1600px] mx-auto">
           <p>
             © {new Date().getFullYear()} Harmony Haven Music Store. All rights
             reserved.

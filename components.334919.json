@@ -43,6 +43,7 @@
         "63019"
       ],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -89,7 +90,8 @@
       "internal_tag_ids": [
         "63019"
       ],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "category-card",
@@ -140,7 +142,8 @@
       "internal_tag_ids": [
         "63019"
       ],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "feature",
@@ -168,29 +171,35 @@
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "featured-product-card",
       "display_name": null,
       "description": "",
       "created_at": "2025-04-14T16:01:21.598Z",
-      "updated_at": "2025-04-15T11:42:30.324Z",
+      "updated_at": "2025-04-15T14:30:16.272Z",
       "id": 7217800,
       "schema": {
+        "image": {
+          "type": "asset",
+          "pos": 0,
+          "id": "nsCoMsW2ROWmefXAeL8_cQ"
+        },
         "product_name": {
           "type": "text",
-          "pos": 0,
+          "pos": 1,
           "id": "R-aIdu-2Q-KL0avbnCzzSg"
         },
         "price": {
           "type": "text",
-          "pos": 1,
+          "pos": 2,
           "id": "SIBMUPwvTwm5LG2DxWE6jg"
         },
         "link": {
           "type": "multilink",
-          "pos": 2,
+          "pos": 3,
           "id": "pNAoPY_3RCiFNGURTboMew"
         }
       },
@@ -215,6 +224,7 @@
         "63019"
       ],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -261,19 +271,25 @@
       "internal_tag_ids": [
         "63019"
       ],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "grid",
       "display_name": null,
       "description": null,
       "created_at": "2025-04-14T12:19:07.077Z",
-      "updated_at": "2025-04-14T12:19:07.077Z",
+      "updated_at": "2025-04-20T21:08:21.762Z",
       "id": 7215847,
       "schema": {
         "columns": {
           "type": "bloks",
           "id": "Bt_FuVf0Rb6DAeJIlMNWHA"
+        },
+        "columns_number": {
+          "type": "number",
+          "pos": 1,
+          "id": "qXt4RovqRHqj_rRHdh7RuA"
         }
       },
       "image": null,
@@ -289,7 +305,8 @@
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "hero",
@@ -346,6 +363,7 @@
         "63019"
       ],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -385,6 +403,7 @@
         "63019"
       ],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -441,7 +460,8 @@
       "internal_tag_ids": [
         "63019"
       ],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "page",
@@ -469,7 +489,85 @@
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "product-detail",
+      "display_name": null,
+      "description": "A page that shows the details of a product.",
+      "created_at": "2025-04-20T19:36:56.873Z",
+      "updated_at": "2025-04-20T19:41:04.723Z",
+      "id": 7244766,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "display_name": "",
+          "id": "JxQuhXQxT1CqUgKdbqkjUw"
+        },
+        "description": {
+          "type": "text",
+          "pos": 1,
+          "id": "KiqSCaiHQI-pAaFNYf_19Q"
+        },
+        "specs": {
+          "type": "textarea",
+          "pos": 2,
+          "id": "Ib7hrjq7T1K-1CRHF1wLzQ"
+        },
+        "photos": {
+          "type": "multiasset",
+          "pos": 3,
+          "id": "ibrrnwqKQ6iPoRaP6FDfSg"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "product-detail",
+      "component_group_uuid": "all",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": ""
+    },
+    {
+      "name": "products",
+      "display_name": null,
+      "description": "A page that lists products of all sorts i.e. instruments, equipments",
+      "created_at": "2025-04-20T20:01:36.462Z",
+      "updated_at": "2025-04-20T20:53:13.866Z",
+      "id": 7245223,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "pos": 2,
+          "id": "VOabQrFFRaCc5H1kXsHclw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "products",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "teaser",
@@ -497,7 +595,38 @@
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
-      "content_type_asset_preview": null
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "title",
+      "display_name": null,
+      "description": null,
+      "created_at": "2025-04-20T20:35:24.043Z",
+      "updated_at": "2025-04-20T20:38:56.130Z",
+      "id": 7245410,
+      "schema": {
+        "value": {
+          "type": "text",
+          "pos": 0,
+          "id": "CSs7YHcoS2K51VfSxtLAhQ"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "title",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     }
   ],
   "component_groups": []
