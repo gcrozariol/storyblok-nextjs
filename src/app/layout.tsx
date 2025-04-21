@@ -9,6 +9,7 @@ import { CartProvider } from '@/context/cart-context'
 import Footer from '@/components/footer'
 import Navigation from '@/components/navigation'
 import { SkipLink } from '@/components/skip-link'
+import { CartSidebar } from '@/components/cart-sidebar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,7 +23,7 @@ const geistMono = GeistMono({
 
 export const metadata: Metadata = {
   title: 'Harmony Haven',
-  description: 'Music store',
+  description: 'Browse our collection of musical instruments',
 }
 
 export default function RootLayout({
@@ -44,6 +45,7 @@ export default function RootLayout({
           >
             <CartProvider>
               <Navigation />
+              <CartSidebar />
               <SkipLink />
               {children}
               <Footer />

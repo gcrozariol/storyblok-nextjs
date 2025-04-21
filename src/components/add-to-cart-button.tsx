@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button'
 import { useCart } from '@/context/cart-context'
 
 export default function AddToCartButton({ product }: { product: any }) {
-  const { addToCart } = useCart()
+  const { addItem } = useCart()
 
   function handleAddToCart() {
-    addToCart(product)
+    addItem(product)
   }
 
   return (

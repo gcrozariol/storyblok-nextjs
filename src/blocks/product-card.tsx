@@ -7,6 +7,7 @@ export default function ProductCardBlock({
   image,
   product_name: productName,
   price,
+  _uid: id,
 }: FeaturedProductCardStoryblok) {
   return (
     <div className="group relative overflow-hidden rounded-lg border bg-background shadow-sm transition-all hover:shadow-md">
@@ -32,9 +33,9 @@ export default function ProductCardBlock({
           </span>
         </div>
         <div className="mt-2 flex items-center justify-between">
-          <p className="font-medium">{price}</p>
+          <p className="font-medium">${price}</p>
           <AddToCartButton
-            product={{ image, product_name: productName, price }}
+            product={{ id, image, product_name: productName, price }}
           />
         </div>
       </div>
