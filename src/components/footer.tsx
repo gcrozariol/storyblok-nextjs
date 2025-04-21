@@ -4,7 +4,7 @@ import { Music } from 'lucide-react'
 export default function Footer() {
   return (
     <footer className="border-t bg-background">
-      <div className="flex max-w-[1550px] mx-auto flex-col gap-8 px-4 py-10 md:px-6 lg:flex-row lg:gap-12">
+      <div className="flex max-w-[1550px] mx-auto flex-col gap-8 px-4 py-10 md:px-6 lg:flex-row lg:gap-40">
         <div className="flex flex-col justify-between gap-4 lg:w-1/3">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold">
             <Music className="h-6 w-6" />
