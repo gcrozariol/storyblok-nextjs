@@ -272,6 +272,7 @@ export interface TeaserStoryblok {
 
 export interface TitleStoryblok {
   value?: string;
+  description?: string;
   _uid: string;
   component: "title";
   [k: string]: any;

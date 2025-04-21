@@ -82,29 +82,14 @@ export default function AboutPage() {
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="relative" aria-labelledby="about-hero-heading">
-        <div className="absolute bg-gradient-to-r from-purple-900/70 to-blue-900/70 z-10" />
-        <div className="h-[400px] bg-[#111] overflow-hidden relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-full h-full opacity-30" aria-hidden="true">
-              <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-purple-500 blur-3xl" />
-              <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-blue-500 blur-3xl" />
-              <div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full bg-indigo-500 blur-3xl" />
-            </div>
-          </div>
-          <div className="container mx-auto px-4 relative z-20 h-full flex items-center">
-            <div className="max-w-3xl">
-              <h1
-                id="about-hero-heading"
-                className="text-4xl md:text-5xl font-bold mb-4"
-              >
-                About Harmony Haven
-              </h1>
-              <p className="text-xl text-gray-200">
-                Bringing quality instruments and expert instruction to musicians
-                of all levels since 1995.
-              </p>
-            </div>
+      <section aria-labelledby="contact-hero-heading">
+        <div className="h-72 bg-[#111] overflow-hidden relative">
+          <div className="text-center container mx-auto px-4 relative z-20 h-full flex flex-col align-center justify-center">
+            <h1 className="text-3xl font-bold mb-2">About Harmony Haven</h1>
+            <p className="text-gray-400">
+              Bringing quality instruments and expert instruction to musicians
+              of all levels since 1995.
+            </p>
           </div>
         </div>
       </section>

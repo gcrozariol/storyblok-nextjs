@@ -31,7 +31,7 @@ export default function Navigation() {
             href="/lessons"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            Lessons
+            Learn
           </Link>
           <Link
             href="/about"
