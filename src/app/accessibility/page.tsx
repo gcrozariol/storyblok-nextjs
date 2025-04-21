@@ -1,6 +1,6 @@
 export default function AccessibilityPage() {
   return (
-    <div className="bg-background text-white">
+    <div className="min-h-[calc(100vh-420px)] bg-background text-white">
       <div className="container mx-auto py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Accessibility Statement</h1>
