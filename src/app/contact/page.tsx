@@ -60,11 +60,14 @@ export default function ContactPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
+    // Fake submit time of one second
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
     console.log(values)
+
     setIsSubmitting(false)
     setIsSuccess(true)
+
     form.reset()
 
     setTimeout(() => {

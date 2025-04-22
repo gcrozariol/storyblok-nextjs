@@ -2,7 +2,7 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'HarmonyHaven',
-    name: 'Harmony Have',
+    name: 'Harmony Haven',
     url: 'https://harmony-haven.gcrozariol.me',
     logo: 'https://harmony-haven.gcrozariol.me/logo.png',
     sameAs: [
@@ -41,7 +41,7 @@ export function generateOrganizationSchema() {
     ],
     priceRange: '$$',
     description:
-      'Harmony Have offers premium musical instruments and expert music lessons for all skill levels. Serving musicians since 1995.',
+      'Harmony Haven offers premium musical instruments and expert music lessons for all skill levels. Serving musicians since 1995.',
   }
 }
 
@@ -64,7 +64,7 @@ export function generateProductSchema(product: any) {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Harmony Have',
+        name: 'Harmony Haven',
       },
     },
     aggregateRating: {
@@ -83,7 +83,7 @@ export function generateMusicLessonSchema() {
     serviceType: 'Music Instruction',
     provider: {
       '@type': 'HarmonyHaven',
-      name: 'Harmony Have',
+      name: 'Harmony Haven',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '123 Music Avenue',

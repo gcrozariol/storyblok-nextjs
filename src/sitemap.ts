@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://harmony-haven.gcrozariol.me'
 
-  // Get all instrument IDs - in a real app, this would come from your database or API
+  // Get all instrument IDs - in a real app, this would come from the database or API
   const instrumentIds = [1, 2, 3, 4, 5, 6, 7, 8]
 
   // Create sitemap entries for instrument pages
